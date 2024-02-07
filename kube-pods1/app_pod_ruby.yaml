@@ -15,3 +15,6 @@ spec:
       containers: 
       - name: ruby_container
         image: dockersheepo/sae503:latest
+      env:
+      - name: TEAM_NAME
+        value: Rubis

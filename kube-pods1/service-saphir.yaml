@@ -1,0 +1,12 @@
+apiVersion: v1 
+kind: Service 
+metadata: 
+  name: saphir-service 
+spec: 
+  selector: 
+    app: saphir 
+  ports: 
+    - protocol: TCP 
+      port: 3082
+      targetPort: 8000 
+  type: ClusterIP

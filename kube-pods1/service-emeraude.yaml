@@ -1,0 +1,12 @@
+apiVersion: v1 
+kind: Service 
+metadata: 
+  name: emeraude-service 
+spec: 
+  selector: 
+    app: emeraude 
+  ports: 
+    - protocol: TCP 
+      port: 3083
+      targetPort: 8000 
+  type: ClusterIP

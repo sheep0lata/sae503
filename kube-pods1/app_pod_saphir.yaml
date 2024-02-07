@@ -1,0 +1,20 @@
+apiVersion: apps/v1 
+kind: Deployment 
+metadata: 
+  name: saphir_deployment
+spec: 
+  replicas: 3 
+  selector: 
+    matchLabels: 
+      app: saphir 
+  template: 
+    metadata: 
+      labels: 
+        app: saphir 
+    spec: 
+      containers: 
+      - name: saphir_container
+        image: dockersheepo/sae503:latest
+      env:
+      - name: TEAM_NAME
+        value: Saphir

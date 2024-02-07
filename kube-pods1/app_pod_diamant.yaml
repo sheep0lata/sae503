@@ -1,0 +1,20 @@
+apiVersion: apps/v1 
+kind: Deployment 
+metadata: 
+  name: diamant_deployment
+spec: 
+  replicas: 3 
+  selector: 
+    matchLabels: 
+      app: diamant 
+  template: 
+    metadata: 
+      labels: 
+        app: diamant 
+    spec: 
+      containers: 
+      - name: diamant_container
+        image: dockersheepo/sae503:latest
+      env:
+      - name: TEAM_NAME
+        value: Diamant

@@ -7,6 +7,6 @@ spec:
     app: ruby 
   ports: 
     - protocol: TCP 
-      port: 3080 
-      targetPort: 3080 
+      port: 3081
+      targetPort: 8000 
   type: ClusterIP

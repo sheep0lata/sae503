@@ -1,0 +1,20 @@
+apiVersion: apps/v1 
+kind: Deployment 
+metadata: 
+  name: emeraude_deployment
+spec: 
+  replicas: 3 
+  selector: 
+    matchLabels: 
+      app: emeraude 
+  template: 
+    metadata: 
+      labels: 
+        app: emeraude
+    spec: 
+      containers: 
+      - name: emeraude_container
+        image: dockersheepo/sae503:latest
+      env:
+      - name: TEAM_NAME
+        value: emeraude
