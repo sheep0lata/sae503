@@ -1,0 +1,16 @@
+apiVersion: v1 
+kind: Pod 
+metadata: 
+  name: redis_pod 
+spec: 
+  containers: 
+  - name: redis_pod 
+    image: redis 
+    command: ["sleep", "3600"] 
+    volumeMounts: 
+    - name: mypd-storage 
+      mountPath: /path/in/container 
+  volumes: 
+  - name: mypd-storage 
+    persistentVolumeClaim: 
+      claimName: my-pvc 
