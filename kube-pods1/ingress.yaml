@@ -10,10 +10,31 @@ spec:
   - host: grp1_test.net
     http:
       paths:
-      - path: /
+      - path: /ruby
         pathType: Prefix
         backend:
           service:
             name: ruby-service
             port:
-              number: 80
+              number: 3081
+      - path: /saphir
+        pathType: Prefix
+        backend:
+          service:
+            name: saphir-service
+            port:
+              number: 3082
+      - path: /emeraude
+        pathType: Prefix
+        backend:
+          service:
+            name: emeraude-service
+            port:
+              number: 3083
+      - path: /diamant
+        pathType: Prefix
+        backend:
+          service:
+            name: diamant-service
+            port:
+              number: 3084
