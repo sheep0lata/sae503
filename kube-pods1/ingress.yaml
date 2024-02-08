@@ -5,18 +5,19 @@ kind: Ingress
 metadata:
   name: IngressTraefik
   namespace: default
-spec:
+  spec:
   rules:
-  - host: grp1_test.net
+  - host: ruby.grp1_test.nip.io
     http:
       paths:
-      - path: /ruby
+      - path: /
         pathType: Prefix
         backend:
           service:
             name: ruby-service
             port:
               number: 3081
+
       - path: /saphir
         pathType: Prefix
         backend:
